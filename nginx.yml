@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+  - name: install the latest version of Nginx
+    yum:
+      name: nginx
+      state: latest
+
+  - name: Start-Up Nginx
+    service: name=nginx state=restarted
